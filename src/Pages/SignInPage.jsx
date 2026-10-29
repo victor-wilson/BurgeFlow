@@ -1,14 +1,13 @@
+import SignInWrapper from "../Components/SignInWrapper"
 
 const SignInPage = () => {
   return (
     <>
-      <div className="flex height-80px text-red-400 bg-blue-600">
-        <div>box 1</div>
-        <div>box 2</div>
-      </div>
+      <SignInWrapper />
     </>
   )
 }
 
 export default SignInPage
 
+{/*#621424*/}
