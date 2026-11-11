@@ -1,13 +1,18 @@
-import SignInWrapper from "../Components/SignInWrapper"
+import { useNavigate } from "react-router"
+import SignInWrapper from "../Components/SignInWrapper";
 
 const SignInPage = () => {
+  const navigate = useNavigate()
+
+  const handleSignIn = () => {
+    navigate("/dashboard")
+  }
+
   return (
     <>
-      <SignInWrapper />
+      <SignInWrapper formSubmit={handleSignIn} />
     </>
   )
 }
 
 export default SignInPage
-
-{/*#621424*/}

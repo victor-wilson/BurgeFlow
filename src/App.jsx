@@ -15,6 +15,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<SignInPage />} />
+        <Route path="dashboard" element={<h1>Dashboard</h1>} />
       </Route>
     )
   )
