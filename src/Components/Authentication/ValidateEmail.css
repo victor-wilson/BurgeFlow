@@ -1,0 +1,56 @@
+.validate-email {
+  display: flex;
+  min-height: 100svh;
+  justify-content: center;
+  padding: 12.18svh 24px 5.59svh;
+  background: var(--color-page-background);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.validate-email__card {
+  display: grid;
+  width: min(1543px, 86.2vw);
+  height: min(898px, 82.23svh);
+  min-height: 560px;
+  grid-template-columns: minmax(0, 1fr);
+  border-radius: 20px;
+  padding: 12px;
+  background: var(--color-surface);
+}
+
+.validate-email__artwork {
+  position: relative;
+  display: none;
+  min-height: 0;
+  border-radius: 15px;
+  background: var(--color-panel-background);
+}
+
+.validate-email__form-panel {
+  min-width: 0;
+  background: var(--color-surface);
+}
+
+@media (min-width: 768px) {
+  .validate-email__card {
+    grid-template-columns: 39% minmax(0, 1fr);
+  }
+
+  .validate-email__artwork {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .validate-email {
+    padding: 24px 16px;
+  }
+
+  .validate-email__card {
+    width: 100%;
+    height: auto;
+    min-height: min(680px, calc(100svh - 48px));
+    padding: 0;
+  }
+}

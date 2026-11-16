@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router';
 import './CreateTransactionPinForm.css';
 
-const CreateTransactionPinForm = ({ onComplete }) => {
+const CreateTransactionPinForm = () => {
   const [pin, setPin] = useState('');
   const [confirmPin, setConfirmPin] = useState('');
 
@@ -17,17 +18,29 @@ const CreateTransactionPinForm = ({ onComplete }) => {
 
     setConfirmPin(value.replace(/\D/g, '').slice(0, 6));
   };
-const submit = (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
+  const continueToEmailValidation = (event) => {
+    const form = event.currentTarget.closest('form');
+
+    if (!form) {
+      event.preventDefault();
+      return;
+    }
+
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      form.reportValidity();
+      return;
+    }
 
     if (!/^\d{6}$/.test(pin)) {
+      event.preventDefault();
       form.elements.pin.setCustomValidity('PIN must contain exactly 6 digits');
       form.reportValidity();
       return;
     }
 
     if (!/^\d{6}$/.test(confirmPin)) {
+      event.preventDefault();
       form.elements.confirmPin.setCustomValidity(
         'PIN must contain exactly 6 digits',
       );
@@ -36,17 +49,20 @@ const submit = (event) => {
     }
 
     if (pin !== confirmPin) {
+      event.preventDefault();
       form.elements.confirmPin.setCustomValidity('PINs do not match');
       form.reportValidity();
       return;
     }
 
-    onComplete();
   };
 
   return (
     <section className="transaction-pin-form">
-      <form className="transaction-pin-form__fields" onSubmit={submit}>
+      <form
+        className="transaction-pin-form__fields"
+        onSubmit={(event) => event.preventDefault()}
+      >
         <h1 className="transaction-pin-form__title">Create Transaction Pin</h1>
         <p className="transaction-pin-form__subtitle">
           Please set up your preferred transaction PIN
@@ -91,9 +107,13 @@ const submit = (event) => {
           </span>
         </label>
 
-        <button className="transaction-pin-form__submit" type="submit">
+        <Link
+          to="/validate-email"
+          onClick={continueToEmailValidation}
+          className="transaction-pin-form__submit"
+        >
           Create Account
-        </button>
+        </Link>
       </form>
     </section>
   );

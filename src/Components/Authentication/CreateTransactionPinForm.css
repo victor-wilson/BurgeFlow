@@ -80,9 +80,12 @@
 }
 
 .transaction-pin-form__submit {
+  display: flex;
   width: 100%;
   min-height: 39px;
   margin-top: 14px;
+  align-items: center;
+  justify-content: center;
   border: 0;
   border-radius: 15px;
   color: var(--color-surface);
@@ -91,6 +94,7 @@
   font-family: var(--font-sans);
   font-size: 10px;
   text-transform: lowercase;
+  text-decoration: none;
 }
 
 .transaction-pin-form__submit:hover {
