@@ -1,4 +1,4 @@
-import SignUpLayout from '../Components/SignUpLayout';
+import SignUpLayout from '../Components/Authentication/SignUpLayout';
 
 const SignUpPage = () => <SignUpLayout />;
 

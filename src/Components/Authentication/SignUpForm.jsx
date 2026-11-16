@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
-import google from '../assets/google.png';
+import google from '../../assets/google.png';
 import './SignUpForm.css';
 
 const FieldIcon = ({ children }) => (

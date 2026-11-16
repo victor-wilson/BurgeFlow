@@ -1,5 +1,5 @@
-import burgeImage from '../assets/burgeImage.png';
-import burgeLogo from '../assets/burgeLogo.png';
+import burgeImage from '../../assets/burgeImage.png';
+import burgeLogo from '../../assets/burgeLogo.png';
 import './ImageAndLogo.css';
 
 const ImageAndLogo = ({ variant = 'signin' }) => (

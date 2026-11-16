@@ -1,7 +1,7 @@
-import google from '../assets/google.png';
+import google from '../../assets/google.png';
 import { useState } from 'react';
 import Loader from './Loader';
-import envelopIcon from '../assets/envelopIcon.png';
+import envelopIcon from '../../assets/envelopIcon.png';
 import { Link } from 'react-router';
 import './SignInForm.css';
 

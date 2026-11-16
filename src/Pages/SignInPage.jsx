@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router"
-import SignInWrapper from "../Components/SignInWrapper";
+import SignInWrapper from "../Components/Authentication/SignInWrapper";
 
 const SignInPage = () => {
   const navigate = useNavigate()

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router';
-import CreateTransactionPinLayout from '../Components/CreateTransactionPinLayout';
+import CreateTransactionPinLayout from '../Components/Authentication/CreateTransactionPinLayout';
 
 const CreateTransactionPinPage = () => {
   const navigate = useNavigate();
