@@ -2,14 +2,14 @@ import ImageAndLogo from './ImageAndLogo';
 import SignUpForm from './SignUpForm';
 import './SignUpLayout.css';
 
-const SignUpLayout = ({ formSubmit }) => (
+const SignUpLayout = () => (
   <main className="sign-up-layout">
     <div className="sign-up-layout__card">
       <section className="sign-up-layout__artwork">
         <ImageAndLogo variant="signup" />
       </section>
       <div className="sign-up-layout__form-panel">
-        <SignUpForm formSubmit={formSubmit} />
+        <SignUpForm />
       </div>
     </div>
   </main>

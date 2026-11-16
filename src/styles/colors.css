@@ -1,0 +1,19 @@
+:root {
+  --color-ink: #202127;
+  --color-primary: #621424;
+  --color-primary-hover: #7a1b30;
+  --color-accent: #ff4772;
+  --color-text-muted: #999;
+  --color-text-soft: #a3a3a3;
+  --color-text-subtle: #aaa;
+  --color-text-placeholder: #777;
+  --color-border: #e9e9e9;
+  --color-divider: #ededed;
+  --color-input-background: #f7f7f7;
+  --color-panel-background: #f7f8f9;
+  --color-page-background: #f6f7f8;
+  --color-surface: #fff;
+  --color-secondary-text: #667085;
+  --color-country-green: #008751;
+  --color-surface-hover: #f9fafb;
+}

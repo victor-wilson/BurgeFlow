@@ -11,7 +11,7 @@
   position: absolute;
   top: 32px;
   right: 20px;
-  color: #a3a3a3;
+  color: var(--color-text-soft);
   font-size: 12px;
 }
 
@@ -45,10 +45,10 @@
   height: 48px;
   align-items: center;
   gap: 12px;
-  border: 1px solid #e9e9e9;
+  border: 1px solid var(--color-border);
   border-radius: 18px;
   padding: 0 16px;
-  background: #f7f7f7;
+  background: var(--color-input-background);
 }
 
 .sign-in-form__input-shell--identity {
@@ -73,13 +73,13 @@
 }
 
 .sign-in-form__input::placeholder {
-  color: #777;
+  color: var(--color-text-placeholder);
 }
 
 .sign-in-form__password-toggle {
   border: 0;
   padding: 0;
-  color: #aaa;
+  color: var(--color-text-subtle);
   background: transparent;
   cursor: pointer;
 }
@@ -104,7 +104,7 @@
 
 .sign-in-form__remember input,
 .sign-up-form__remember input {
-  accent-color: #621424;
+  accent-color: var(--color-primary);
 }
 
 .sign-in-form__link {
@@ -113,12 +113,12 @@
 
 .sign-in-form__link--signup {
   margin-left: 4px;
-  color: #621424;
+  color: var(--color-primary);
   font-weight: 500;
 }
 
 .sign-in-form__link--forgot {
-  color: #ff4772;
+  color: var(--color-accent);
 }
 
 .sign-in-form__submit,
@@ -134,14 +134,14 @@
 
 .sign-in-form__submit {
   border: 0;
-  color: #fff;
-  background: #621424;
+  color: var(--color-surface);
+  background: var(--color-primary);
   font-size: 14px;
   font-weight: 500;
 }
 
 .sign-in-form__submit:hover {
-  background: #7a1b30;
+  background: var(--color-primary-hover);
 }
 
 .sign-in-form__divider {
@@ -149,26 +149,26 @@
   align-items: center;
   gap: 8px;
   margin: 24px 0;
-  color: #aaa;
+  color: var(--color-text-subtle);
   font-size: 12px;
 }
 
 .sign-in-form__divider span {
   height: 1px;
   flex: 1;
-  background: #ededed;
+  background: var(--color-divider);
 }
 
 .sign-in-form__google {
   gap: 12px;
-  border: 1px solid #e9e9e9;
-  color: #999;
-  background: #fff;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
   font-size: 12px;
 }
 
 .sign-in-form__google:hover {
-  background: #f9fafb;
+  background: var(--color-surface-hover);
 }
 
 .sign-in-form__google img {
@@ -179,7 +179,7 @@
 
 .sign-in-form__submit:focus-visible,
 .sign-in-form__google:focus-visible {
-  outline: 2px solid #621424;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 

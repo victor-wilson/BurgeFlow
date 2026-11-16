@@ -11,13 +11,13 @@
   position: absolute;
   top: 32px;
   right: 24px;
-  color: #999;
+  color: var(--color-text-muted);
   font-size: 9px;
 }
 
 .sign-up-form__link {
   margin-left: 4px;
-  color: #621424;
+  color: var(--color-primary);
   font-weight: 500;
   text-decoration: none;
 }
@@ -37,7 +37,7 @@
 
 .sign-up-form__subtitle {
   margin: 0 0 8px;
-  color: #999;
+  color: var(--color-text-muted);
   font-size: 8px;
   white-space: nowrap;
 }
@@ -54,10 +54,10 @@
   height: 28px;
   align-items: center;
   gap: 8px;
-  border: 1px solid #e9e9e9;
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 0 10px;
-  background: #f7f7f7;
+  background: var(--color-input-background);
 }
 
 .sign-up-form__field-icon {
@@ -80,7 +80,7 @@
 .sign-up-form__password-toggle {
   border: 0;
   padding: 0;
-  color: #aaa;
+  color: var(--color-text-subtle);
   background: transparent;
   cursor: pointer;
 }
@@ -109,7 +109,7 @@
 }
 
 .sign-up-form__country-code {
-  color: #667085;
+  color: var(--color-secondary-text);
   font-size: 12px;
 }
 
@@ -117,7 +117,7 @@
   width: 12px;
   height: 12px;
   flex: 0 0 auto;
-  color: #667085;
+  color: var(--color-secondary-text);
 }
 
 .sign-up-form__password-fields {
@@ -158,13 +158,14 @@
 
 .sign-up-form__submit {
   border: 0;
-  color: #fff;
-  background: #621424;
+  color: var(--color-surface);
+  background: var(--color-primary);
   font-weight: 500;
+  text-decoration: none;
 }
 
 .sign-up-form__submit:hover {
-  background: #7a1b30;
+  background: var(--color-primary-hover);
 }
 
 .sign-up-form__divider {
@@ -172,7 +173,7 @@
   align-items: center;
   gap: 8px;
   margin: 11px 0 10px;
-  color: #aaa;
+  color: var(--color-text-subtle);
   font-size: 10px;
 }
 
@@ -180,7 +181,7 @@
 .sign-up-form__divider span:last-child {
   height: 1px;
   flex: 1;
-  background: #ededed;
+  background: var(--color-divider);
 }
 
 .sign-up-form__divider span:nth-child(2) {
@@ -189,13 +190,13 @@
 
 .sign-up-form__google {
   gap: 8px;
-  border: 1px solid #e9e9e9;
-  color: #999;
-  background: #fff;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
 }
 
 .sign-up-form__google:hover {
-  background: #f9fafb;
+  background: var(--color-surface-hover);
 }
 
 .sign-up-form__google img {
@@ -206,7 +207,7 @@
 
 .sign-up-form__submit:focus-visible,
 .sign-up-form__google:focus-visible {
-  outline: 2px solid #621424;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 

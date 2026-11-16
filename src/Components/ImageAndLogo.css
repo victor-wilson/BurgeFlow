@@ -29,3 +29,9 @@
 .image-and-logo--signup .image-and-logo__illustration {
   top: 36%;
 }
+
+.image-and-logo--transaction-pin .image-and-logo__logo {
+  top: 32px;
+  left: 32px;
+  width: 120px;
+}

@@ -7,6 +7,7 @@ import {
 import MainLayout from "./Layouts/MainLayout";
 import SignInPage from "./Pages/SignInPage";
 import SignUpPage from "./Pages/SignUpPage";
+import CreateTransactionPinPage from "./Pages/CreateTransactionPinPage";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<SignInPage />} />
         <Route path="signup" element={<SignUpPage />} />
+        <Route path="create-transaction-pin" element={<CreateTransactionPinPage />} />
         <Route path="dashboard" element={<h1>Dashboard</h1>} />
       </Route>
     )

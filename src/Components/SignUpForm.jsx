@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 import google from '../assets/google.png';
-import Loader from './Loader';
 import './SignUpForm.css';
 
 const FieldIcon = ({ children }) => (
@@ -39,7 +38,7 @@ const InputShell = ({ children }) => (
   <div className="sign-up-form__input-shell">{children}</div>
 );
 
-const SignUpForm = ({ formSubmit }) => {
+const SignUpForm = () => {
   const [values, setValues] = useState({
     firstName: 'Ademu',
     lastName: 'Zainab',
@@ -53,8 +52,6 @@ const SignUpForm = ({ formSubmit }) => {
     password: false,
     confirmPassword: false,
   });
-  const [isLoading, setIsLoading] = useState(false);
-
   const updateValue = (event) => {
     const { name, value } = event.target;
     if (name === 'password' || name === 'confirmPassword') {
@@ -70,21 +67,27 @@ const SignUpForm = ({ formSubmit }) => {
     }));
   };
 
-  const submit = async (event) => {
-    event.preventDefault();
-    if (values.password !== values.confirmPassword) {
-      event.currentTarget.elements.confirmPassword.setCustomValidity(
-        'Passwords do not match',
-      );
-      event.currentTarget.reportValidity();
+  const validateAndNavigate = (event) => {
+    const form = event.currentTarget.closest('form');
+
+    if (!form) {
+      event.preventDefault();
       return;
     }
 
-    setIsLoading(true);
-    try {
-      await formSubmit();
-    } finally {
-      setIsLoading(false);
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      form.reportValidity();
+      return;
+    }
+
+    if (values.password !== values.confirmPassword) {
+      event.preventDefault();
+      form.elements.confirmPassword.setCustomValidity(
+        'Passwords do not match',
+      );
+      form.reportValidity();
+      return;
     }
   };
 
@@ -131,7 +134,7 @@ const SignUpForm = ({ formSubmit }) => {
 
       <form
         className="sign-up-form__fields"
-        onSubmit={submit}
+        onSubmit={(event) => event.preventDefault()}
       >
         <h1 className="sign-up-form__title">
           Sign up
@@ -192,9 +195,9 @@ const SignUpForm = ({ formSubmit }) => {
               aria-label="Nigeria"
               role="img"
             >
-              <rect width="6" height="12" fill="#008751" />
-              <rect x="6" width="6" height="12" fill="#fff" />
-              <rect x="12" width="6" height="12" fill="#008751" />
+              <rect width="6" height="12" fill="var(--color-country-green)" />
+              <rect x="6" width="6" height="12" fill="var(--color-surface)" />
+              <rect x="12" width="6" height="12" fill="var(--color-country-green)" />
             </svg>
             <span className="sign-up-form__country-code">+234</span>
             <svg
@@ -257,13 +260,13 @@ const SignUpForm = ({ formSubmit }) => {
         </label>
 
         <div className="sign-up-form__actions">
-          <button
-            type="submit"
-            disabled={isLoading}
+          <Link
+            to="/create-transaction-pin"
+            onClick={validateAndNavigate}
             className="sign-up-form__submit"
           >
-            {isLoading ? <Loader label="Creating account" /> : 'Create Account'}
-          </button>
+            Create Account
+          </Link>
 
           <div className="sign-up-form__divider">
             <span />

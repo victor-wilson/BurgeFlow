@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
-  background: #f6f7f8;
-  color: #202127;
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-page-background);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
 }
 
 .sign-up-layout__card {
@@ -17,7 +17,7 @@
   grid-template-columns: minmax(0, 1fr);
   border-radius: 20px;
   padding: 8px;
-  background: #fff;
+  background: var(--color-surface);
 }
 
 .sign-up-layout__artwork {
@@ -27,13 +27,13 @@
   flex-direction: column;
   border-radius: 15px;
   padding: 28px;
-  background: #f7f8f9;
+  background: var(--color-panel-background);
 }
 
 .sign-up-layout__form-panel {
   min-width: 0;
   border-radius: 15px;
-  background: #fff;
+  background: var(--color-surface);
 }
 
 @media (min-width: 768px) {

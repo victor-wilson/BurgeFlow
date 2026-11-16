@@ -26,7 +26,8 @@ const SignInForm = ({ formSubmit }) => {
   return (
     <section className="sign-in-form">
         <p className="sign-in-form__signup-prompt">
-          Don't have an account?{' '}<Link to="/signup" className="sign-in-form__link sign-in-form__link--signup">
+          Don't have an account?{' '}
+          <Link to="/signup" className="sign-in-form__link sign-in-form__link--signup">
             Sign Up
           </Link>
         </p>

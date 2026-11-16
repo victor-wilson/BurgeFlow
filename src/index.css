@@ -1,7 +1,10 @@
+@import './styles/colors.css';
+@import './styles/fonts.css';
+
 :root {
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  color: #202127;
-  background: #fff;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-surface);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

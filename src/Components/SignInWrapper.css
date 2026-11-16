@@ -4,9 +4,9 @@
   width: 100%;
   min-height: 100vh;
   padding: 12px;
-  background: #fff;
-  color: #202127;
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
 }
 
 .sign-in-wrapper__artwork {
@@ -16,7 +16,7 @@
   flex-direction: column;
   border-radius: 20px;
   padding: 40px;
-  background: #f7f8f9;
+  background: var(--color-panel-background);
 }
 
 @media (min-width: 1024px) {

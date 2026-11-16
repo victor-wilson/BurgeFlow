@@ -4,7 +4,7 @@ import './Loader.css';
 const Loader = ({ label = 'Signing in' }) => {
   return (
     <span className="loader">
-      <CircleLoader size={20} color="#ffffff" aria-label={label} />
+      <CircleLoader size={20} color="var(--color-surface)" aria-label={label} />
     </span>
   )
 }
