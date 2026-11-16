@@ -1,0 +1,204 @@
+.sign-in-form {
+  position: relative;
+  display: flex;
+  min-height: calc(100svh - 24px);
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.sign-in-form__signup-prompt {
+  position: absolute;
+  top: 32px;
+  right: 20px;
+  color: #a3a3a3;
+  font-size: 12px;
+}
+
+.sign-in-form__fields {
+  width: 100%;
+  max-width: 350px;
+}
+
+.sign-in-form__title {
+  margin: 0 0 8px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.sign-in-form__subtitle {
+  margin: 0 0 32px;
+  font-size: 12px;
+}
+
+.sign-in-form__label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.sign-in-form__input-shell {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e9e9e9;
+  border-radius: 18px;
+  padding: 0 16px;
+  background: #f7f7f7;
+}
+
+.sign-in-form__input-shell--identity {
+  margin-bottom: 16px;
+}
+
+.sign-in-form__envelope-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.sign-in-form__input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  padding: 0;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+}
+
+.sign-in-form__input::placeholder {
+  color: #777;
+}
+
+.sign-in-form__password-toggle {
+  border: 0;
+  padding: 0;
+  color: #aaa;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sign-in-form__password-toggle svg {
+  display: block;
+}
+
+.sign-in-form__options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 40px;
+  font-size: 12px;
+}
+
+.sign-in-form__remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sign-in-form__remember input,
+.sign-up-form__remember input {
+  accent-color: #621424;
+}
+
+.sign-in-form__link {
+  text-decoration: none;
+}
+
+.sign-in-form__link--signup {
+  margin-left: 4px;
+  color: #621424;
+  font-weight: 500;
+}
+
+.sign-in-form__link--forgot {
+  color: #ff4772;
+}
+
+.sign-in-form__submit,
+.sign-in-form__google {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.sign-in-form__submit {
+  border: 0;
+  color: #fff;
+  background: #621424;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sign-in-form__submit:hover {
+  background: #7a1b30;
+}
+
+.sign-in-form__divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.sign-in-form__divider span {
+  height: 1px;
+  flex: 1;
+  background: #ededed;
+}
+
+.sign-in-form__google {
+  gap: 12px;
+  border: 1px solid #e9e9e9;
+  color: #999;
+  background: #fff;
+  font-size: 12px;
+}
+
+.sign-in-form__google:hover {
+  background: #f9fafb;
+}
+
+.sign-in-form__google img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.sign-in-form__submit:focus-visible,
+.sign-in-form__google:focus-visible {
+  outline: 2px solid #621424;
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .sign-in-form {
+    padding-inline: 40px;
+  }
+
+  .sign-in-form__signup-prompt {
+    right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sign-in-form__signup-prompt {
+    right: 9%;
+  }
+
+  .sign-in-form__fields {
+    transform: translateY(24px);
+  }
+}

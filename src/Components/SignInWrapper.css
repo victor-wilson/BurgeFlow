@@ -1,0 +1,30 @@
+.sign-in-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  min-height: 100vh;
+  padding: 12px;
+  background: #fff;
+  color: #202127;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.sign-in-wrapper__artwork {
+  position: relative;
+  display: none;
+  min-height: calc(100svh - 24px);
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 40px;
+  background: #f7f8f9;
+}
+
+@media (min-width: 1024px) {
+  .sign-in-wrapper {
+    grid-template-columns: 39% minmax(0, 1fr);
+  }
+
+  .sign-in-wrapper__artwork {
+    display: flex;
+  }
+}

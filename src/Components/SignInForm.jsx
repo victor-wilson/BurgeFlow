@@ -3,9 +3,10 @@ import { useState } from 'react';
 import Loader from './Loader';
 import envelopIcon from '../assets/envelopIcon.png';
 import { Link } from 'react-router';
+import './SignInForm.css';
 
 
-const SignInForm = () => {
+const SignInForm = ({ formSubmit }) => {
 
   const [userName, setUserName] = useState('Zainabadamu@gmail.com');
   const [password, setPassword] = useState('Iceberg29');
@@ -23,31 +24,31 @@ const SignInForm = () => {
 
 
   return (
-    <section className="relative flex min-h-[calc(100svh-24px)] items-center justify-center px-5 py-20 sm:px-10">
-        <p className="absolute right-5 top-8 text-xs text-[#a3a3a3] sm:right-10 lg:right-[9%]">
-          Don't have an account?{' '}<Link to="#sign-up" className="ml-1 font-medium text-[#621424]">
+    <section className="sign-in-form">
+        <p className="sign-in-form__signup-prompt">
+          Don't have an account?{' '}<Link to="/signup" className="sign-in-form__link sign-in-form__link--signup">
             Sign Up
           </Link>
         </p>
 
         <form
-          className="w-full max-w-[350px] lg:translate-y-6"
+          className="sign-in-form__fields"
           onSubmit={submit}
         >
-          <h1 className="mb-2 text-[40px] font-bold leading-tight tracking-tight">
+          <h1 className="sign-in-form__title">
             Sign in
           </h1>
-          <p className="mb-8 text-xs">start managing and tracking your funds</p>
+          <p className="sign-in-form__subtitle">start managing and tracking your funds</p>
 
-          <label htmlFor="identity" className="mb-3 block text-xs font-medium">
+          <label htmlFor="identity" className="sign-in-form__label">
             Email, username or mobile number
           </label>
-          <div className="mb-4 flex h-12 items-center gap-3 rounded-[18px] border border-[#e9e9e9] bg-[#f7f7f7] px-4">
+          <div className="sign-in-form__input-shell sign-in-form__input-shell--identity">
             <img 
               src={envelopIcon}
               alt="envelop-icon"
               aria-hidden="true"
-              className="h-5 w-5 shrink-0"
+              className="sign-in-form__envelope-icon"
             />
             <input
               id="identity"
@@ -56,14 +57,14 @@ const SignInForm = () => {
               onChange={(event) => setUserName(event.target.value)}
               autoComplete="username"
               placeholder="Email, username or mobile number"
-              className="min-w-0 flex-1 bg-transparent text-xs outline-none placeholder:text-[#777]"
+              className="sign-in-form__input"
             />
           </div>
 
-          <label htmlFor="password" className="mb-3 block text-xs font-medium">
+          <label htmlFor="password" className="sign-in-form__label">
             Password
           </label>
-          <div className="flex h-12 items-center gap-3 rounded-[18px] border border-[#e9e9e9] bg-[#f7f7f7] px-4">
+          <div className="sign-in-form__input-shell">
             <svg
               viewBox="0 0 20 20"
               width="20"
@@ -88,12 +89,12 @@ const SignInForm = () => {
               autoComplete="current-password"
               placeholder="Password"
               value={password}
-              className="min-w-0 flex-1 bg-transparent text-xs outline-none placeholder:text-[#777]"
+              className="sign-in-form__input"
             />
             <button type="button" 
             aria-label= { isPasswordVisible ? 'Hide password' : 'Show password'}
             onClick={ () => setIsPasswordVisible((visible) => !visible) }
-            className="text-[#aaa]"
+            className="sign-in-form__password-toggle"
             >
 
               <svg
@@ -111,12 +112,12 @@ const SignInForm = () => {
             </button>
           </div>
 
-          <div className="mb-10 mt-4 flex items-center justify-between text-xs">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" name="remember" className="accent-[#621424]" />
+          <div className="sign-in-form__options">
+            <label className="sign-in-form__remember">
+              <input type="checkbox" name="remember" />
               Remember me
             </label>
-            <Link to="#forgot-password" className="text-[#ff4772]">
+            <Link to="#forgot-password" className="sign-in-form__link sign-in-form__link--forgot">
               Forgot password
             </Link>
           </div>
@@ -124,21 +125,21 @@ const SignInForm = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="h-12 w-full rounded-[16px] bg-[#621424] text-sm font-medium text-white hover:bg-[#7a1b30] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#621424]"
+            className="sign-in-form__submit"
           >
             {isLoading ? (<Loader />) : ('Sign in')}
           </button>
-          <div className="my-6 flex items-center gap-2 text-xs text-[#aaa]">
-            <span className="h-px flex-1 bg-[#ededed]" />
+          <div className="sign-in-form__divider">
+            <span />
             <span>Or continue with</span>
-            <span className="h-px flex-1 bg-[#ededed]" />
+            <span />
           </div>
 
           <button
             type="button"
-            className="flex h-12 w-full items-center justify-center gap-3 rounded-[16px] border border-[#e9e9e9] text-xs text-[#999] hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#621424]"
+            className="sign-in-form__google"
           >
-            <img src={google} alt="" className="h-5 w-5 object-contain" />
+            <img src={google} alt="" />
             Sign in with Google
           </button>
         </form>

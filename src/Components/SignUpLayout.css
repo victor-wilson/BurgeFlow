@@ -1,0 +1,60 @@
+.sign-up-layout {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: #f6f7f8;
+  color: #202127;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.sign-up-layout__card {
+  display: grid;
+  width: min(1543px, 86.2vw);
+  height: min(1198px, calc(100svh - 88px));
+  min-height: 680px;
+  grid-template-columns: minmax(0, 1fr);
+  border-radius: 20px;
+  padding: 8px;
+  background: #fff;
+}
+
+.sign-up-layout__artwork {
+  position: relative;
+  display: none;
+  min-height: 0;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 28px;
+  background: #f7f8f9;
+}
+
+.sign-up-layout__form-panel {
+  min-width: 0;
+  border-radius: 15px;
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .sign-up-layout__card {
+    grid-template-columns: 39% minmax(0, 1fr);
+    transform: translateY(32px);
+  }
+
+  .sign-up-layout__artwork {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sign-up-layout__card {
+    transform: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .sign-up-layout {
+    padding-inline: 32px;
+  }
+}

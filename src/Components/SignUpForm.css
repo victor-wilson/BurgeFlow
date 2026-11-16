@@ -1,0 +1,233 @@
+.sign-up-form {
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.sign-up-form__signin-prompt {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  color: #999;
+  font-size: 9px;
+}
+
+.sign-up-form__link {
+  margin-left: 4px;
+  color: #621424;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sign-up-form__fields {
+  width: 100%;
+  max-width: 350px;
+}
+
+.sign-up-form__title {
+  margin: 0 0 4px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.sign-up-form__subtitle {
+  margin: 0 0 8px;
+  color: #999;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.sign-up-form__label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.sign-up-form__input-shell {
+  display: flex;
+  height: 28px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  padding: 0 10px;
+  background: #f7f7f7;
+}
+
+.sign-up-form__field-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+
+.sign-up-form__input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  padding: 0;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+}
+
+.sign-up-form__password-toggle {
+  border: 0;
+  padding: 0;
+  color: #aaa;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sign-up-form__password-toggle svg {
+  display: block;
+}
+
+.sign-up-form__name-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 11px;
+}
+
+.sign-up-form__field--username,
+.sign-up-form__field--mobile,
+.sign-up-form__field--email {
+  margin-bottom: 15px;
+}
+
+.sign-up-form__country-flag {
+  width: 18px;
+  height: 12px;
+  flex: 0 0 auto;
+}
+
+.sign-up-form__country-code {
+  color: #667085;
+  font-size: 12px;
+}
+
+.sign-up-form__country-chevron {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  color: #667085;
+}
+
+.sign-up-form__password-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sign-up-form__remember {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 11px;
+}
+
+.sign-up-form__remember input {
+  width: 12px;
+  height: 12px;
+}
+
+.sign-up-form__actions {
+  margin-top: 79px;
+}
+
+.sign-up-form__submit,
+.sign-up-form__google {
+  display: flex;
+  width: 100%;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.sign-up-form__submit {
+  border: 0;
+  color: #fff;
+  background: #621424;
+  font-weight: 500;
+}
+
+.sign-up-form__submit:hover {
+  background: #7a1b30;
+}
+
+.sign-up-form__divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 11px 0 10px;
+  color: #aaa;
+  font-size: 10px;
+}
+
+.sign-up-form__divider span:first-child,
+.sign-up-form__divider span:last-child {
+  height: 1px;
+  flex: 1;
+  background: #ededed;
+}
+
+.sign-up-form__divider span:nth-child(2) {
+  white-space: nowrap;
+}
+
+.sign-up-form__google {
+  gap: 8px;
+  border: 1px solid #e9e9e9;
+  color: #999;
+  background: #fff;
+}
+
+.sign-up-form__google:hover {
+  background: #f9fafb;
+}
+
+.sign-up-form__google img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.sign-up-form__submit:focus-visible,
+.sign-up-form__google:focus-visible {
+  outline: 2px solid #621424;
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .sign-up-form {
+    padding-inline: 40px;
+  }
+
+  .sign-up-form__signin-prompt {
+    right: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sign-up-form__signin-prompt {
+    top: 32px;
+    right: 6%;
+  }
+
+  .sign-up-form__fields {
+    max-width: 236px;
+    transform: translate(-19px, 14px);
+  }
+}
