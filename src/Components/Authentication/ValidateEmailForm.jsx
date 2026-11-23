@@ -20,11 +20,10 @@ const ValidateEmailForm = ({ onComplete }) => {
 
   const submit = (event) => {
     event.preventDefault();
-
-    if (code.some((digit) => digit === '')) {
-      setError('Enter the 6-digit code to continue.');
-      return;
-    }
+  if (code.some((digit) => digit === '')) {
+        setError('Enter the 6-digit code to continue.');
+        return;
+      }
 
     onComplete();
   };
@@ -57,8 +56,7 @@ const ValidateEmailForm = ({ onComplete }) => {
               aria-label={`Digit ${index + 1} of 6`}
               required
             />
-          ))}
-        </div>
+          ))}</div>
 
         {error && (
           <p className="validate-email-form__error" role="alert">

@@ -1,0 +1,35 @@
+.account-successful-layout {
+  display: flex;
+  min-height: 100svh;
+  justify-content: center;
+  padding: 12.18svh 24px 5.59svh;
+  background: var(--color-page-background);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.account-successful-layout__frame {
+  position: relative;
+  width: min(1543px, 86.2vw);
+  height: min(899px, 82.23svh);
+  min-height: min(560px, 82.23svh);
+  border-radius: 20px;
+  background: var(--color-surface);
+}
+
+@media (max-width: 767px) {
+  .account-successful-layout {
+    padding: 24px 16px;
+  }
+
+  .account-successful-layout__frame {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: calc(100svh - 48px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 14px;
+  }
+}

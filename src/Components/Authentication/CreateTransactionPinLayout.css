@@ -12,11 +12,11 @@
 .transaction-pin-layout__card {
   display: grid;
   width: min(1543px, 86.2vw);
-  height: min(1198px, 79.2svh);
+  height: min(899px, 82.23svh);
   min-height: 560px;
   grid-template-columns: minmax(0, 1fr);
   border-radius: 20px;
-  padding: 12px;
+  padding: 18px 14px;
   background: var(--color-surface);
 }
 
@@ -24,7 +24,7 @@
   position: relative;
   display: none;
   min-height: 0;
-  border-radius: 15px;
+  border-radius: 20px;
   background: var(--color-panel-background);
 }
 
@@ -35,7 +35,7 @@
 
 @media (min-width: 768px) {
   .transaction-pin-layout__card {
-    grid-template-columns: 39% minmax(0, 1fr);
+    grid-template-columns: min(590px, 39%) minmax(0, 1fr);
   }
 
   .transaction-pin-layout__artwork {
@@ -44,10 +44,14 @@
 }
 
 @media (max-width: 480px) {
+  .transaction-pin-layout {
+    min-height: calc(100svh + 50px);
+  }
+
   .transaction-pin-layout__card {
     width: 100%;
     height: auto;
-    min-height: min(680px, calc(100svh - 48px));
+    min-height: min(730px, calc(100svh + 2px));
     padding: 0;
   }
 }

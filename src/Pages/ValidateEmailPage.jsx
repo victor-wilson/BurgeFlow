@@ -5,7 +5,7 @@ const ValidateEmailPage = () => {
   const navigate = useNavigate();
 
   const handleComplete = () => {
-    navigate('/dashboard');
+    navigate('/account-successful');
   };
 
   return <ValidateEmail onComplete={handleComplete} />;

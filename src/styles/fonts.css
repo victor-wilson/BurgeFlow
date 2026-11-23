@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
 :root {
   --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-dm-sans: 'DM Sans', var(--font-sans);
 }

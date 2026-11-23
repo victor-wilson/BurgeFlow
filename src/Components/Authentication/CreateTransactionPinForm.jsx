@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
+import * as Switch from '@radix-ui/react-switch';
 import './CreateTransactionPinForm.css';
 
 const CreateTransactionPinForm = () => {
@@ -63,10 +64,14 @@ const CreateTransactionPinForm = () => {
         className="transaction-pin-form__fields"
         onSubmit={(event) => event.preventDefault()}
       >
-        <h1 className="transaction-pin-form__title">Create Transaction Pin</h1>
-        <p className="transaction-pin-form__subtitle">
-          Please set up your preferred transaction PIN
-        </p>
+        <div className="transaction-pin-form__heading">
+          <h1 className="transaction-pin-form__title">
+            Create Transaction Pin
+          </h1>
+          <p className="transaction-pin-form__subtitle">
+            Please set up your preferred transaction PIN
+          </p>
+        </div>
 
         <div className="transaction-pin-form__field">
           <label htmlFor="pin">Create Transaction PIN</label>
@@ -99,13 +104,19 @@ const CreateTransactionPinForm = () => {
           />
         </div>
 
-        <label className="transaction-pin-form__notice">
-          <input type="checkbox" defaultChecked />
+        <div className="transaction-pin-form__notice">
+          <Switch.Root
+            className="transaction-pin-form__switch"
+            defaultChecked
+            aria-labelledby="pin-help"
+          >
+            <Switch.Thumb className="transaction-pin-form__switch-thumb" />
+          </Switch.Root>
           <span id="pin-help">
             Your transaction PIN will be required to authorize payments and
             transfers.
           </span>
-        </label>
+        </div>
 
         <Link
           to="/validate-email"

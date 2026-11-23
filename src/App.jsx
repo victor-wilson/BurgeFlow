@@ -9,6 +9,7 @@ import SignInPage from "./Pages/SignInPage";
 import SignUpPage from "./Pages/SignUpPage";
 import CreateTransactionPinPage from "./Pages/CreateTransactionPinPage";
 import ValidateEmailPage from "./Pages/ValidateEmailPage";
+import AccountSuccessful from "./Components/Authentication/AccountSuccessful";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="signup" element={<SignUpPage />} />
         <Route path="create-transaction-pin" element={<CreateTransactionPinPage />} />
         <Route path="validate-email" element={<ValidateEmailPage />} />
+        <Route path="account-successful" element={<AccountSuccessful />} />
         <Route path="dashboard" element={<h1>Dashboard</h1>} />
       </Route>
     )
