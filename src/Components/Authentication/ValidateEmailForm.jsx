@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './ValidateEmailForm.css';
 
 const ValidateEmailForm = ({ onComplete }) => {
   const [code, setCode] = useState(['', '', '', '', '', '']);
   const [error, setError] = useState('');
+  const inputRefs = useRef([]);
 
   const resendCode = () => {
     setCode(['', '', '', '', '', '']);
     setError('');
+    inputRefs.current[0]?.focus();
   };
 
   const updateDigit = (index, value) => {
@@ -16,15 +18,42 @@ const ValidateEmailForm = ({ onComplete }) => {
     updatedCode[index] = digit;
     setCode(updatedCode);
     setError('');
+
+    if (digit && index < inputRefs.current.length - 1) {
+      inputRefs.current[index + 1]?.focus();
+    }
+  };
+
+  const handlePaste = (index, event) => {
+    const pastedDigits = event.clipboardData.getData('text').replace(/\D/g, '');
+    if (!pastedDigits) return;
+
+    event.preventDefault();
+    const updatedCode = [...code];
+    const digits = pastedDigits.slice(0, updatedCode.length - index);
+
+    digits.split('').forEach((digit, offset) => {
+      updatedCode[index + offset] = digit;
+    });
+
+    setCode(updatedCode);
+    setError('');
+    const focusIndex = Math.min(index + digits.length, updatedCode.length - 1);
+    inputRefs.current[focusIndex]?.focus();
+  };
+
+  const handleKeyDown = (index, event) => {
+    if (event.key === 'Backspace' && !code[index] && index > 0) {
+      inputRefs.current[index - 1]?.focus();
+    }
   };
 
   const submit = (event) => {
     event.preventDefault();
-  if (code.some((digit) => digit === '')) {
-        setError('Enter the 6-digit code to continue.');
-        return;
-      }
-
+    if (code.some((digit) => digit === '')) {
+      setError('Enter the 6-digit code to continue.');
+      return;
+    }
     onComplete();
   };
 
@@ -47,16 +76,22 @@ const ValidateEmailForm = ({ onComplete }) => {
           {code.map((digit, index) => (
             <input
               key={index}
+              ref={(input) => {
+                inputRefs.current[index] = input;
+              }}
               type="text"
               inputMode="numeric"
               pattern="[0-9]"
               maxLength={1}
               value={digit}
               onChange={(event) => updateDigit(index, event.currentTarget.value)}
+              onKeyDown={(event) => handleKeyDown(index, event)}
+              onPaste={(event) => handlePaste(index, event)}
               aria-label={`Digit ${index + 1} of 6`}
               required
             />
-          ))}</div>
+          ))}
+        </div>
 
         {error && (
           <p className="validate-email-form__error" role="alert">

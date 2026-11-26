@@ -15,7 +15,8 @@ const AccountSuccessfulBrandMessage = () => (
     >
       <div className="account-successful-brand-message__status-frame">
         <div className="account-successful-brand-message__icon" aria-hidden="true">
-          <Check size={32} strokeWidth={3} />
+          <span className="account-successful-brand-message__icon-inner" />
+          <Check size={39.3038} strokeWidth={3} />
         </div>
 
         <div className="account-successful-brand-message__copy-frame">

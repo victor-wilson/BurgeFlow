@@ -83,8 +83,7 @@ const CreateTransactionPinForm = () => {
             autoComplete="new-password"
             placeholder="******"
             value={pin}
-            onChange={updatePin}
-            required
+            onChange={updatePin}required
             aria-describedby="pin-help"
           />
         </div>

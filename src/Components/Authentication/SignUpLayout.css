@@ -12,10 +12,11 @@
 .sign-up-layout__card {
   display: grid;
   width: min(1543px, 86.2vw);
-  height: min(1198px, calc(100svh - 88px));
-  min-height: 680px;
+  height: auto;
+  min-height: min(1238px, calc(100svh - 48px));
   grid-template-columns: minmax(0, 1fr);
   border-radius: 20px;
+  overflow: hidden;
   padding: 8px;
   background: var(--color-surface);
 }
@@ -39,17 +40,10 @@
 @media (min-width: 768px) {
   .sign-up-layout__card {
     grid-template-columns: 39% minmax(0, 1fr);
-    transform: translateY(32px);
   }
 
   .sign-up-layout__artwork {
     display: flex;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sign-up-layout__card {
-    transform: none;
   }
 }
 

@@ -1,30 +1,60 @@
 .sign-in-wrapper {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  width: 100%;
-  min-height: 100vh;
-  padding: 12px;
-  background: var(--color-surface);
+  display: flex;
+  width: min(1790px, 100vw);
+  height: min(1092px, 100svh);
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: #F7F8F9;
   color: var(--color-ink);
   font-family: var(--font-sans);
+}
+
+.sign-in-wrapper__frame {
+  display: grid;
+  width: min(1543px, 86.2vw);
+  height: min(899px, 82.33svh);
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  border-radius: 20px;
+  padding: 8px;
+  background: var(--color-surface);
 }
 
 .sign-in-wrapper__artwork {
   position: relative;
   display: none;
-  min-height: calc(100svh - 24px);
+  width: 100%;
+  height: min(862px, 100%);
+  min-height: 0;
+  align-self: center;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 40px;
   background: var(--color-panel-background);
 }
 
 @media (min-width: 1024px) {
-  .sign-in-wrapper {
-    grid-template-columns: 39% minmax(0, 1fr);
+  .sign-in-wrapper__frame {
+    grid-template-columns: min(590px, 39%) minmax(0, 1fr);
   }
 
   .sign-in-wrapper__artwork {
     display: flex;
+  }
+}
+
+@media (max-width: 1023px) {
+  .sign-in-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 100svh;
+    padding: 12px;
+  }
+
+  .sign-in-wrapper__frame {
+    width: min(1543px, 100%);
+    height: auto;
+    min-height: calc(100svh - 24px);
   }
 }
