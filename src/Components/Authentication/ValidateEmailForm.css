@@ -24,7 +24,7 @@
 .validate-email-form__subtitle {
   margin: 0 0 30px;
   color: var(--color-text-muted);
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.45;
 }
 
@@ -68,7 +68,7 @@
   background: var(--color-primary);
   cursor: pointer;
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .validate-email-form__continue:disabled {
@@ -85,7 +85,7 @@
 .validate-email-form__resend {
   margin: 15px 0 0;
   color: var(--color-ink);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .validate-email-form__resend button {
