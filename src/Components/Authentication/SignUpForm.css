@@ -9,7 +9,7 @@
 
 .sign-up-form__signin-prompt {
   position: absolute;
-  top: 32px;
+  top: 17px;
   right: 24px;
   color: var(--color-text-muted);
   font-size: 12px;
@@ -247,7 +247,7 @@
 
 @media (min-width: 768px) {
   .sign-up-form__signin-prompt {
-    top: 32px;
+    top: 17px;
     right: 6%;
   }
 
