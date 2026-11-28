@@ -52,3 +52,27 @@
     padding-inline: 32px;
   }
 }
+
+@media (max-width: 767px) {
+  .sign-up-layout {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .sign-up-layout__card {
+    width: 100%;
+    min-height: calc(100svh - 24px);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: clamp(130px, 20svh, 170px) auto;
+  }
+
+  .sign-up-layout__artwork {
+    display: block;
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .sign-up-layout__form-panel {
+    min-height: 0;
+  }
+}

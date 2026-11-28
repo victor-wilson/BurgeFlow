@@ -51,6 +51,16 @@
     width: 100%;
     height: auto;
     min-height: min(680px, calc(100svh - 48px));
+    grid-template-rows: clamp(130px, 20svh, 170px) auto;
     padding: 0;
+  }
+
+  .validate-email__artwork {
+    display: block;
+    min-height: 0;
+  }
+
+  .validate-email__form-panel {
+    min-height: 0;
   }
 }

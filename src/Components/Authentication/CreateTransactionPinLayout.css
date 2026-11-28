@@ -43,15 +43,29 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .transaction-pin-layout {
-    min-height: calc(100svh + 50px);
+    min-height: 100svh;
+    align-items: flex-start;
+    padding: 12px;
   }
 
   .transaction-pin-layout__card {
     width: 100%;
     height: auto;
-    min-height: min(730px, calc(100svh + 2px));
-    padding: 0;
+    min-height: calc(100svh - 24px);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: clamp(130px, 20svh, 170px) auto;
+    padding: 12px;
+  }
+
+  .transaction-pin-layout__artwork {
+    display: block;
+    min-height: 0;
+    border-radius: 15px;
+  }
+
+  .transaction-pin-layout__form-panel {
+    min-height: 0;
   }
 }

@@ -194,15 +194,31 @@
   outline-offset: 3px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1023px) {
+  .transaction-pin-form__heading {
+    width: 100%;
+    height: auto;
+  }
+
+  .transaction-pin-form__title {
+    width: 100%;
+    height: auto;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 767px) {
   .transaction-pin-form {
-    padding: 80px 24px 32px;
+    padding: 40px 16px 24px;
   }
 
   .transaction-pin-form__fields {
-    --transaction-pin-control-width: 203px;
+    --transaction-pin-control-width: min(100%, 374px);
+    transform: none;
   }
+}
 
+@media (max-width: 480px) {
   .transaction-pin-form__title {
     font-size: 19px;
   }

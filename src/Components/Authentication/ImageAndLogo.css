@@ -31,3 +31,23 @@
   left: 32px;
   width: 105px;
 }
+
+@media (max-width: 767px) {
+  .image-and-logo__logo,
+  .image-and-logo--signup .image-and-logo__logo,
+  .image-and-logo--transaction-pin .image-and-logo__logo {
+    z-index: 1;
+    top: 12px;
+    left: 12px;
+    width: clamp(76px, 20vw, 105px);
+  }
+
+  .image-and-logo__illustration {
+    top: 54%;
+    left: 64%;
+    width: min(62%, 230px);
+    max-width: none;
+    max-height: calc(100% - 20px);
+    object-fit: contain;
+  }
+}

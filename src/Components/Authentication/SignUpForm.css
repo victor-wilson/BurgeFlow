@@ -256,3 +256,26 @@
     transform: translateX(-19px);
   }
 }
+
+@media (max-width: 767px) {
+  .sign-up-form {
+    min-height: 0;
+    align-items: flex-start;
+    padding: 56px 16px 24px;
+  }
+
+  .sign-up-form__signin-prompt {
+    top: 16px;
+    right: 16px;
+  }
+
+  .sign-up-form__title,
+  .sign-up-form__subtitle,
+  .sign-up-form__subtitle ~ * {
+    transform: none;
+  }
+
+  .sign-up-form__subtitle {
+    white-space: normal;
+  }
+}
