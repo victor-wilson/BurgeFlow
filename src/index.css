@@ -5,6 +5,7 @@
   font-family: var(--font-sans);
   color: var(--color-ink);
   background: var(--color-surface);
+  --auth-brand-panel-height: clamp(145px, calc(20svh + 15px), 185px);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

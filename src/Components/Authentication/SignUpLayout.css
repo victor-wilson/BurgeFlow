@@ -62,8 +62,9 @@
   .sign-up-layout__card {
     width: 100%;
     min-height: calc(100svh - 24px);
+    padding: 12px;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: clamp(130px, 20svh, 170px) auto;
+    grid-template-rows: var(--auth-brand-panel-height) auto;
   }
 
   .sign-up-layout__artwork {

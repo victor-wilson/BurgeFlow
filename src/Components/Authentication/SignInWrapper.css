@@ -79,8 +79,9 @@
   }
 
   .sign-in-wrapper__frame {
+    padding: 12px;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: clamp(130px, 20svh, 170px) auto;
+    grid-template-rows: var(--auth-brand-panel-height) auto;
   }
 
   .sign-in-wrapper__artwork {

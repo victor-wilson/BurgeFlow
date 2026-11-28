@@ -159,7 +159,7 @@
   .account-successful-brand-message__artwork {
     display: block;
     width: 100%;
-    height: clamp(130px, 20svh, 170px);
+    height: var(--auth-brand-panel-height);
     min-height: 0;
     border-radius: 15px;
   }

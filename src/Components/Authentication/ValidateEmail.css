@@ -51,7 +51,7 @@
     width: 100%;
     height: auto;
     min-height: min(680px, calc(100svh - 48px));
-    grid-template-rows: clamp(130px, 20svh, 170px) auto;
+    grid-template-rows: var(--auth-brand-panel-height) auto;
     padding: 12px;
   }
 
