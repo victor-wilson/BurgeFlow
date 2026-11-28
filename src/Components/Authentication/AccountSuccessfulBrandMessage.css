@@ -172,6 +172,7 @@
     width: 100%;
     height: auto;
     min-height: 0;
+    transform: translateY(45px);
     gap: clamp(2px, 5vw, 45px);
     padding: 0;
   }

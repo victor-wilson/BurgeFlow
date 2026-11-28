@@ -28,7 +28,7 @@
     height: auto;
     min-height: calc(100svh - 48px);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 32px;
     padding: 12px;
   }
