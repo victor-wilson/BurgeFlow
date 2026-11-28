@@ -110,3 +110,15 @@
     gap: 8px;
   }
 }
+
+@media (max-width: 767px) {
+  .validate-email-form__fields {
+    transform: translateY(calc(-7svh - 30px));
+  }
+}
+
+@media (max-width: 480px) {
+  .validate-email-form__fields {
+    transform: translateY(-30px);
+  }
+}
