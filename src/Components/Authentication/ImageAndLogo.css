@@ -50,4 +50,8 @@
     max-height: calc(100% - 20px);
     object-fit: contain;
   }
+
+  .image-and-logo--transaction-pin .image-and-logo__illustration {
+    top: 50%;
+  }
 }

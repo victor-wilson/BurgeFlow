@@ -52,12 +52,22 @@
     height: auto;
     min-height: min(680px, calc(100svh - 48px));
     grid-template-rows: clamp(130px, 20svh, 170px) auto;
-    padding: 0;
+    padding: 12px;
   }
 
   .validate-email__artwork {
     display: block;
     min-height: 0;
+    overflow: hidden;
+  }
+
+  .validate-email__artwork .image-and-logo--transaction-pin .image-and-logo__logo {
+    top: 2px;
+  }
+
+  .validate-email__artwork .image-and-logo--transaction-pin .image-and-logo__illustration {
+    top: calc(50% - 10px);
+    max-height: calc(100% - 22px);
   }
 
   .validate-email__form-panel {

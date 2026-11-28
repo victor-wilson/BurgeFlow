@@ -214,7 +214,13 @@
 
   .transaction-pin-form__fields {
     --transaction-pin-control-width: min(100%, 374px);
-    transform: none;
+    transform: translateY(-5px);
+  }
+
+  .transaction-pin-form__field input {
+    padding-right: 16px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 

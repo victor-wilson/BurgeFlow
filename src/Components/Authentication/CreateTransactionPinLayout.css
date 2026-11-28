@@ -55,7 +55,7 @@
     height: auto;
     min-height: calc(100svh - 24px);
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: clamp(130px, 20svh, 170px) auto;
+    grid-template-rows: calc(clamp(130px, 20svh, 170px) + 15px) auto;
     padding: 12px;
   }
 
