@@ -29,7 +29,8 @@
   align-items: center;
   align-self: center;
   justify-self: center;
-  gap: 75px;
+  transform: translateY(-10px);
+  gap: 45px;
   padding: 0;
   background: transparent;
   font-family: var(--font-dm-sans);
@@ -46,13 +47,13 @@
   flex: 0 0 auto;
   flex-direction: column;
   align-items: center;
-  gap: 53px;
+  gap: 33px;
 }
 
 .account-successful-brand-message__icon {
   position: relative;
-  width: 85px;
-  height: 84.1905px;
+  width: 75px;
+  height: 74.1905px;
   flex: 0 0 auto;
   border-radius: 50%;
   background: #ffa4b7;
@@ -60,20 +61,20 @@
 
 .account-successful-brand-message__icon-inner {
   position: absolute;
-  top: 6.4766px;
-  left: 7.2852px;
-  width: 71.2381px;
-  height: 71.2381px;
+  top: 6.4762px;
+  left: 6.881px;
+  width: 61.2381px;
+  height: 61.2381px;
   border-radius: 50%;
   background: #de375b;
 }
 
 .account-successful-brand-message__icon svg {
   position: absolute;
-  top: 15.5234px;
-  left: 15.7148px;
-  width: 39.3038px;
-  height: 39.3038px;
+  top: 15.9672px;
+  left: 15.9672px;
+  width: 29.3038px;
+  height: 29.3038px;
   color: #fff7f9;
 }
 
@@ -92,14 +93,14 @@
   margin: 0;
   color: #1a1c23;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.3;
   letter-spacing: -0.02em;
   text-align: center;
 }
 
 .account-successful-brand-message__copy-frame p {
-  width: min(509px, 100%);
+  width: min(420px, 90%);
   margin: 0;
   color: #909090;
   font-weight: 400;
@@ -167,13 +168,13 @@
     width: 100%;
     height: auto;
     min-height: 0;
-    gap: clamp(32px, 5vw, 75px);
+    gap: clamp(2px, 5vw, 45px);
     padding: 0;
   }
 
   .account-successful-brand-message__status-frame {
     min-height: 0;
-    gap: clamp(32px, 7vw, 53px);
+    gap: clamp(12px, 7vw, 33px);
   }
 
   .account-successful-brand-message__copy-frame h1 {
