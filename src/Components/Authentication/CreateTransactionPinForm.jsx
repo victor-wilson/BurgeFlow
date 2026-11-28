@@ -19,7 +19,7 @@ const CreateTransactionPinForm = () => {
 
     setConfirmPin(value.replace(/\D/g, '').slice(0, 6));
   };
-  const continueToEmailValidation = (event) => {
+  const continueAfterPinValidation = (event) => {
     const form = event.currentTarget.closest('form');
 
     if (!form) {
@@ -118,8 +118,8 @@ const CreateTransactionPinForm = () => {
         </div>
 
         <Link
-          to="/validate-email"
-          onClick={continueToEmailValidation}
+          to="/account-successful"
+          onClick={continueAfterPinValidation}
           className="transaction-pin-form__submit"
         >
           Create Account

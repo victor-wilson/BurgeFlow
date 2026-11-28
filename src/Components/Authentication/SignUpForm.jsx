@@ -15,9 +15,7 @@ const FieldIcon = ({ children }) => (
     aria-hidden="true"
   >
     {children}
-  </svg>
-);
-
+  </svg>);
 const LockIcon = () => (
   <FieldIcon>
     <path d="M6 9V6a4 4 0 0 1 8 0v3" />
@@ -25,7 +23,6 @@ const LockIcon = () => (
     <path d="M10 12v2" />
   </FieldIcon>
 );
-
 const EyeIcon = ({ visible }) => (
   <FieldIcon>
     <path d="M2 10s2.9-5 8-5 8 5 8 5-2.9 5-8 5-8-5-8-5Z" />
@@ -261,7 +258,7 @@ const SignUpForm = () => {
 
         <div className="sign-up-form__actions">
           <Link
-            to="/create-transaction-pin"
+            to="/validate-email"
             onClick={validateAndNavigate}
             className="sign-up-form__submit"
           >
